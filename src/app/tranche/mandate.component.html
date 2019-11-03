@@ -1,6 +1,9 @@
 CurrentTab: {{currentTab}}
+<div *ngIf="venuesIssuenetService$ | async as venue">
+    {{venue?.pmid}}
+</div>
 
-<mat-tab-group (selectedIndexChange)="setTabIndex($event)">
+<mat-tab-group (selectedIndexChange)="setTabIndex($event)" (focusChange)="onFocusChanged($event)">
     <mat-tab label="Issue 1">
         <ng-template matTabContent>
             <app-tranche issueId="1"></app-tranche>
