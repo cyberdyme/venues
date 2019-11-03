@@ -2,12 +2,18 @@ CurrentTab: {{currentTab}}
 
 <mat-tab-group (selectedIndexChange)="setTabIndex($event)">
     <mat-tab label="Issue 1">
-        <app-tranche issueId="1"></app-tranche>
+        <ng-template matTabContent>
+            <app-tranche issueId="1"></app-tranche>
+        </ng-template>
     </mat-tab>
     <mat-tab label="Issue 2">
-        <app-tranche issueId="2"></app-tranche>
+        <ng-template matTabContent>
+            <app-tranche issueId="2"></app-tranche>
+        </ng-template>
     </mat-tab>
     <mat-tab label="Issue 3">
-        <app-tranche issueId="3"></app-tranche>
+        <ng-template matTabContent>
+            <app-tranche issueId="3"></app-tranche>
+        </ng-template>
     </mat-tab>
 </mat-tab-group>

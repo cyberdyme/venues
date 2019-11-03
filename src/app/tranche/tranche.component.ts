@@ -14,6 +14,7 @@ export class TrancheComponent implements OnInit {
   constructor(private venuesIssuenetService: VenuesIssuenetService) { }
 
   ngOnInit() {
+    console.log('app-tranche::ngOnInit()');
     this.venuesIssuenetService$ = this.venuesIssuenetService.venueIssuenetStream$(this.issueId);
   }
 }
